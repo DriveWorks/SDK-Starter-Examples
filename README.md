@@ -23,3 +23,6 @@ If you need any further clarity on the functionality of this code please contact
 It is not recommended to download and modify this code. Please implement the code examples into your own solution.
 
 We have a full [integration plugin example](https://github.com/DriveWorks/Labs-Integration-Example) which can be downloaded and modified. 
+
+The SDK is made freely available to all customers with a valid subscription contract.
+To obtain the SDK please send an email request to apisupport@driveworks.co.uk.
