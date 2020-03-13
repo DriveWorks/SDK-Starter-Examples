@@ -1,7 +1,7 @@
 ## DriveWorks SDK Starter Examples
 This code shows examples of how to add functionality to DriveWorks using the SDK.
 Examples include:
-* Function using Shared Project Extender
+* Function using a Shared Project Extender and Project Extender
 * Generation Task
 * Specification Macro Condition
 * Specification Macro Task
