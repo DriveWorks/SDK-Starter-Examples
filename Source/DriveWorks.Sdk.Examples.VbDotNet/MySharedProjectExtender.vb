@@ -8,11 +8,19 @@ Public Class MySharedProjectExtender
 
     Protected Overrides Sub OnInitialize()
         MyBase.OnInitialize()
-
         Me.EnsureStartTimeSet()
     End Sub
 
-    <Udf()>
+    ''' <remarks>
+    ''' Note the allowRunDuringLoad parameter Is set to true.
+    ''' This will cause DriveWorks to initialize the function And make it available to rules before the project opens.
+    ''' Because the function Is initialized before the project has been fully loaded
+    ''' the function might Not have access to any objects related to the project such
+    ''' as form controls, variables, etc when it Is executed. This option Is only recommended
+    ''' for functions that rely solely on the parameters passed to the function.
+    ''' Such as this one.
+    ''' </remarks>
+    <Udf(True)>
     <FunctionInfo("Gets the time that the project was opened.", "SDK-Starter-Examples Plugin")>
     Public Function EXAMPLEStartTime() As DateTime
 
