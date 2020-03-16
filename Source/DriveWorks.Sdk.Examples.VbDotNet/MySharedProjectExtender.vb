@@ -17,7 +17,7 @@ Public Class MySharedProjectExtender
     ''' Because the function Is initialized before the project has been fully loaded
     ''' the function might Not have access to any objects related to the project such
     ''' as form controls, variables, etc when it Is executed. This option Is only recommended
-    ''' for functions that rely solely on the parameters passed to the function.
+    ''' for functions that rely solely on the parameters or object data which does not interact with DriveWorks.
     ''' Such as this one.
     ''' </remarks>
     <Udf(True)>
