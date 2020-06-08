@@ -28,7 +28,7 @@ namespace DriveWorks.Sdk.Examples.CSharp
 
             bool topLevelOnly = false;
 
-            if (this.Data.TryGetParameterValueAsBoolean(REBUILD_TOP_LEVEL_RULE_INVARIANT_NAME, ref topLevelOnly))
+            if (!this.Data.TryGetParameterValueAsBoolean(REBUILD_TOP_LEVEL_RULE_INVARIANT_NAME, ref topLevelOnly))
             {
                 // The user didn't build a rule for the "Top Level Only" rule, or the rule evaluated
                 // to something that couldn't be converted to a Boolean.
