@@ -32,7 +32,7 @@ Public Class MyGenerationTask
 
         Dim topLevelOnly As Boolean = False
 
-        If Me.Data.TryGetParameterValueAsBoolean(REBUILD_TOP_LEVEL_RULE_INVARIANT_NAME, topLevelOnly) Then
+        If Not Me.Data.TryGetParameterValueAsBoolean(REBUILD_TOP_LEVEL_RULE_INVARIANT_NAME, topLevelOnly) Then
 
             ' The user didn't build a rule for the "Top Level Only" rule, or the rule evaluated
             ' to something that couldn't be converted to a Boolean.
