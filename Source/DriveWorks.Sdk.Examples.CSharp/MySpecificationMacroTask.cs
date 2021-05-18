@@ -11,12 +11,14 @@ namespace DriveWorks.Sdk.Examples.CSharp
     {
         private FlowProperty<string> MyName { get; }
         private FlowProperty<string> MyValue { get; }
-
+        private NodeOutput MyNodeOutput { get; }
         public MySpecificationMacroTask()
         {
             // Register properties so DriveWorks can see them and build rules for them.
             MyName = this.Properties.RegisterStringProperty("Name", "Name of the constant to set.");
             MyValue = this.Properties.RegisterStringProperty("Value", "Value of the constant.");
+            // Register node output so DriveWorks can output data.
+            MyNodeOutput = this.Outputs.Register("Log", "My Task", typeof(string));
         }
 
         protected override void Execute(SpecificationContext ctx)
@@ -28,14 +30,17 @@ namespace DriveWorks.Sdk.Examples.CSharp
             {
                 // Set the constant value.
                 theConstant.Value = MyValue.Value;
-
                 // Mark the Task as successful. 
-                this.SetState(NodeExecutionState.Successful, "The constant value was successfully set.");
+                this.SetState(NodeExecutionState.Successful, string.Format("The constant '{0}' value was successfully set.", MyName.Value));
+                //Set node output value
+                MyNodeOutput.Fulfill(string.Format("The constant '{0}' value was successfully set.", MyName.Value));
             }
             else
             {
                 // Mark the Task as failed and report that we could not find the constant.
-                this.SetState(NodeExecutionState.Failed, "The constant '" + MyName.Value + "' does not exist.");
+                this.SetState(NodeExecutionState.Failed, string.Format("The constant '{0}' does not exist.", MyName.Value));
+                // Set node output value
+                MyNodeOutput.Fulfill(string.Format("The constant '{0}' does not exist.", MyName.Value));
             }
         }
     }
