@@ -10,8 +10,9 @@
     <AssemblyName>DriveWorks.Sdk.Examples.VbDotNet</AssemblyName>
     <FileAlignment>512</FileAlignment>
     <MyType>Windows</MyType>
-    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
     <Deterministic>true</Deterministic>
+    <TargetFrameworkProfile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -45,20 +46,23 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="DriveWorks.Applications, Version=17.2.0.0, Culture=neutral, PublicKeyToken=6a7b6697bc4ff5ec, processorArchitecture=MSIL">
-      <HintPath>..\packages\DriveWorks.Applications.17.2.0\lib\net461\DriveWorks.Applications.dll</HintPath>
+    <Reference Include="DriveWorks.Applications">
     </Reference>
-    <Reference Include="DriveWorks.Engine, Version=17.2.0.0, Culture=neutral, PublicKeyToken=6a7b6697bc4ff5ec, processorArchitecture=MSIL">
-      <HintPath>..\packages\DriveWorks.Engine.17.2.0\lib\net461\DriveWorks.Engine.dll</HintPath>
+    <Reference Include="DriveWorks.Engine">
+      <HintPath>..\..\..\temp\DriveWorks.Engine.dll</HintPath>
     </Reference>
-    <Reference Include="DriveWorks.SolidWorks, Version=17.2.0.0, Culture=neutral, PublicKeyToken=6a7b6697bc4ff5ec, processorArchitecture=MSIL">
-      <HintPath>..\packages\DriveWorks.SolidWorks.17.2.0\lib\net461\DriveWorks.SolidWorks.dll</HintPath>
+    <Reference Include="DriveWorks.SolidWorks">
+      <HintPath>..\..\..\temp\DriveWorks.SolidWorks.dll</HintPath>
     </Reference>
-    <Reference Include="SolidWorks.Interop.sldworks, Version=23.4.0.56, Culture=neutral, PublicKeyToken=7c4797c3e4eeac03, processorArchitecture=MSIL">
-      <HintPath>..\packages\SolidWorks.Interop.sldworks.23.4.0.56\lib\net40\SolidWorks.Interop.sldworks.dll</HintPath>
+    <Reference Include="DriveWorks.SpecificationPowerPack">
+      <HintPath>..\..\..\temp\DriveWorks.SpecificationPowerPack.dll</HintPath>
+    </Reference>
+    <Reference Include="SolidWorks.Interop.sldworks">
+      <HintPath>..\..\..\temp\SolidWorks.Interop.sldworks.dll</HintPath>
       <EmbedInteropTypes>True</EmbedInteropTypes>
     </Reference>
-    <Reference Include="SolidWorks.Interop.swconst, Version=23.4.0.56, Culture=neutral, PublicKeyToken=19f43e188e4269d8, processorArchitecture=MSIL">
-      <HintPath>..\packages\SolidWorks.Interop.swconst.23.4.0.56\lib\net40\SolidWorks.Interop.swconst.dll</HintPath>
+    <Reference Include="SolidWorks.Interop.swconst">
+      <HintPath>..\..\..\temp\SolidWorks.Interop.swconst.dll</HintPath>
       <EmbedInteropTypes>True</EmbedInteropTypes>
     </Reference>
     <Reference Include="System" />
@@ -68,8 +72,8 @@
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="System.Net.Http" />
-    <Reference Include="Titan.Rules, Version=17.2.0.0, Culture=neutral, PublicKeyToken=6a7b6697bc4ff5ec, processorArchitecture=MSIL">
-      <HintPath>..\packages\Titan.Rules.17.2.0\lib\net461\Titan.Rules.dll</HintPath>
+    <Reference Include="Titan.Rules">
+      <HintPath>..\..\..\temp\Titan.Rules.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>
@@ -85,11 +89,14 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="MyGenerationTask.vb" />
+    <Compile Include="MyErrorStrings.vb" />
+    <Compile Include="MyReportingTask.vb" />
     <Compile Include="MySpecificationMacroCondition.vb" />
     <Compile Include="My Project\AssemblyInfo.vb" />
     <Compile Include="My Project\Application.Designer.vb">
       <AutoGen>True</AutoGen>
       <DependentUpon>Application.myapp</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <Compile Include="My Project\Resources.Designer.vb">
       <AutoGen>True</AutoGen>
