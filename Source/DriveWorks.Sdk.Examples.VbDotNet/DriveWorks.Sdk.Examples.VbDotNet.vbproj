@@ -84,6 +84,7 @@
     <Import Include="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="MyGenerationTaskSpecificationCondition.vb" />
     <Compile Include="MyGenerationTask.vb" />
     <Compile Include="MySpecificationMacroCondition.vb" />
     <Compile Include="My Project\AssemblyInfo.vb" />
@@ -126,6 +127,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Puzzle-16x16.png" />
+    <EmbeddedResource Include="Puzzle-16x16.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
 </Project>
