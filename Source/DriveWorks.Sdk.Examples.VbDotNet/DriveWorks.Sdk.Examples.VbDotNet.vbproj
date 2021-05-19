@@ -126,7 +126,6 @@
     </None>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Puzzle-16x16.png" />
     <EmbeddedResource Include="Puzzle-16x16.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
