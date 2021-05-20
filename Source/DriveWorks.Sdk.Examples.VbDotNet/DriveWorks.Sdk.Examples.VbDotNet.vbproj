@@ -104,6 +104,7 @@
     <Compile Include="MySharedProjectExtender.vb" />
     <Compile Include="MySpecificationMacroTask.vb" />
     <Compile Include="MyProjectExtender.vb" />
+    <Compile Include="MyStandardArray.vb" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="My Project\Resources.resx">

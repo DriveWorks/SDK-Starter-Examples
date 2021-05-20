@@ -5,7 +5,7 @@ Public Class MyStandardArray
     Inherits SharedProjectExtender
 
     <Udf(True)>
-    <FunctionInfo("MyStandardArray.", "SDK-Starter-Examples Plugin")>
+    <FunctionInfo("Get DriveWorks Array.", "SDK-Starter-Examples Plugin")>
     Public Function ExampleMyStandardArray() As Object
 
         'Call BuildStandardArray method for dummy data object

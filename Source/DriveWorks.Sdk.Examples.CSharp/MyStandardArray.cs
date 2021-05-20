@@ -5,9 +5,8 @@ namespace DriveWorks.Sdk.Examples.CSharp
 {
     public class MyStandardArray : SharedProjectExtender
     {
-
         [Udf(true)]
-        [FunctionInfo("MyStandardArray.", "SDK-Starter-Examples Plugin")]
+        [FunctionInfo("Get DriveWorks Array", "SDK-Starter-Examples Plugin")]
         public object ExampleMyStandardArray()
         {
             //Call BuildStandardArray method for dummy data object
