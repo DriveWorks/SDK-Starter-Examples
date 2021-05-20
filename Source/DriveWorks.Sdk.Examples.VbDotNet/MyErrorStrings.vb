@@ -4,34 +4,23 @@ Imports Titan.Rules.Execution
 Public Class MyErrorStrings
     Inherits ProjectExtender
 
+    Private Const CONTENT_LENGTH_ERROR_PREFIX = "#FINDUSERID! User ID invalid."
+    '<remarks>
+    'UDF validates User ID input.
+    ' If User ID Is 3 characters In length Function will output successful message otherwise an Error. 
+    '</remarks>   
     <Udf(True)>
-    <FunctionInfo("Multiplies two numbers.", "SDK-Starter-Examples Plugin")>
-    Function ExampleErrorStrings() As Object
+    <FunctionInfo("ExampleErrorString.", "SDK-Starter-Examples Plugin")>
+    Function ExampleErrorString(<ParamInfo("User ID", "Enter User ID integer.")> ByVal userID As String) As Object
 
-        Dim isErrorStringExample As String = "#PREFIX! Problem description."
-        Dim isErrorExample As String = "#NAME?"
+        If (userID.Length = 3) Then
 
-        Return String.Format("IsErrorString({0}) result: {1}. IsError({2}) result: {3}.",
-                             isErrorStringExample,
-                             Me.IsErrorString(isErrorStringExample),
-                             isErrorExample,
-                             Me.IsError(isErrorExample))
+            Return String.Format("User ID: {0} has been validated successfully.", userID)
 
-    End Function
+        Else
 
-    Private Function IsErrorString(isErrorStringExample As String) As Boolean
+            Return CONTENT_LENGTH_ERROR_PREFIX
 
-        'Check if isErrorStringExample isErrorString
-        Return Titan.Rules.Common.StringFunctions.IsErrorString(isErrorStringExample)
-
-    End Function
-
-    Private Function IsError(isErrorExample As String) As Boolean
-
-        'Initialize list of isError patterns 
-        Dim isErrorPatern() As String = {"#N/A", "#VALUE!", "#REF!", "#DIV/0!", "#NUM!", "#NAME?", "#NULL"}
-        'Check isErrorPatern contains isErrorExample
-        Return isErrorPatern.Contains(isErrorExample)
-
+        End If
     End Function
 End Class
