@@ -12,6 +12,7 @@ namespace DriveWorks.Sdk.Examples.CSharp
         private FlowProperty<string> MyName { get; }
         private FlowProperty<string> MyValue { get; }
         private NodeOutput MyNodeOutput { get; }
+
         public MySpecificationMacroTask()
         {
             // Register properties so DriveWorks can see them and build rules for them.
