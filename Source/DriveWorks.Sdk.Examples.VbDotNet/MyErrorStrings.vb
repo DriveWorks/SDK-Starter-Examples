@@ -5,6 +5,7 @@ Public Class MyErrorStrings
     Inherits ProjectExtender
 
     Private Const EXAMPLE_ERROR_STRING = "#FINDUSERID! User ID invalid."
+
     '<remarks>
     'UDF validates User ID input.
     ' If User ID Is 3 characters In length Function will output successful message otherwise an error string. 
