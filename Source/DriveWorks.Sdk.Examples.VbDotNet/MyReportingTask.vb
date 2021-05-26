@@ -1,9 +1,6 @@
 ﻿' Import the Specification namespace so we have access to Specification flow.
 Imports DriveWorks.Specification
 
-' Import EventFlow to access the Task EventFlow technology.
-Imports DriveWorks.EventFlow
-
 <Task("My Reporting Task", "embedded://DriveWorks.Sdk.Examples.VbDotNet.Puzzle-16x16.png", "SDK-Starter-Examples Plugin")>
 Public Class MyReportingTask
     Inherits Task
