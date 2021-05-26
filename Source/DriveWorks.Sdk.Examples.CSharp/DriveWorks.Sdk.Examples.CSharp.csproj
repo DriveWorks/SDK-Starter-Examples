@@ -66,6 +66,7 @@
     <Compile Include="MySpecificationMacroCondition.cs" />
     <Compile Include="MySharedProjectExtender.cs" />
     <Compile Include="MyProjectExtender.cs" />
+    <Compile Include="MyReportingTask.cs" />
     <Compile Include="MyStandardArray.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="MySpecificationMacroTask.cs" />

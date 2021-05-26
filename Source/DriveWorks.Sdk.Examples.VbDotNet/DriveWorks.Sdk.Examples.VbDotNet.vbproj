@@ -103,6 +103,7 @@
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
     <Compile Include="MySharedProjectExtender.vb" />
+    <Compile Include="MyReportingTask.vb" />
     <Compile Include="MySpecificationMacroTask.vb" />
     <Compile Include="MyProjectExtender.vb" />
     <Compile Include="MyStandardArray.vb" />
