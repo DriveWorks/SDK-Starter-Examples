@@ -84,6 +84,7 @@
     <Import Include="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="MyErrorStrings.vb" />
     <Compile Include="MyGenerationTaskSpecificationCondition.vb" />
     <Compile Include="MyGenerationTask.vb" />
     <Compile Include="MySpecificationMacroCondition.vb" />
