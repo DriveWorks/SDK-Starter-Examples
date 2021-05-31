@@ -3,6 +3,7 @@ This code shows examples of how to add functionality to DriveWorks using the SDK
 Examples include:
 * Function using a Shared Project Extender and Project Extender
 * Generation Task
+* Generation Task Specification Condition
 * Generation Task Generation Condition
 * Specification Macro Condition
 * Specification Macro Task

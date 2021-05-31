@@ -84,6 +84,8 @@
     <Import Include="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="MyErrorStrings.vb" />
+    <Compile Include="MyGenerationTaskSpecificationCondition.vb" />
     <Compile Include="MyGenerationTaskGenerationCondition.vb" />
     <Compile Include="MyGenerationTask.vb" />
     <Compile Include="MySpecificationMacroCondition.vb" />
@@ -103,8 +105,10 @@
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
     <Compile Include="MySharedProjectExtender.vb" />
+    <Compile Include="MyReportingTask.vb" />
     <Compile Include="MySpecificationMacroTask.vb" />
     <Compile Include="MyProjectExtender.vb" />
+    <Compile Include="MyStandardArray.vb" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="My Project\Resources.resx">
