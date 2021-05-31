@@ -63,6 +63,7 @@
   <ItemGroup>
     <Compile Include="MyErrorStrings.cs" />
     <Compile Include="MyGenerationTaskSpecificationCondition.cs" />
+    <Compile Include="MyGenerationTaskGenerationCondition.cs" />
     <Compile Include="MyGenerationTask.cs" />
     <Compile Include="MySpecificationMacroCondition.cs" />
     <Compile Include="MySharedProjectExtender.cs" />
